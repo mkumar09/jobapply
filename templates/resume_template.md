@@ -38,9 +38,14 @@ call, not deterministic code.
   "skills_highlight": ["Kafka", "AWS", "Spring Boot"],   # names to move first within their category
   "experience_order": {
     "Standard Chartered Bank (via Capgemini)": [1, 0, 2, 3]  # bullet indices reordered, most relevant first
-  }
+  },
+  "max_bullets_per_role": 4  # optional, defaults to 4 — lower it if a JD needs a shorter resume
 }
 ```
+
+The renderer is tuned to keep output to one page (A4, tight margins/spacing, capped
+bullets) — this is intentional, don't loosen the formatting or raise the bullet cap
+without a reason, since one-page is the target length for this profile.
 
 Rules:
 - Never fabricate metrics, tech, or responsibilities not already in `resume_profile.yaml`.

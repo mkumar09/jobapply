@@ -19,9 +19,28 @@ from pathlib import Path
 
 import yaml
 from docx import Document
-from docx.shared import Pt
+from docx.shared import Cm, Pt
+from docx.enum.text import WD_LINE_SPACING
 
 ROOT = Path(__file__).resolve().parent.parent
+
+# Keeps a 6-YOE resume to one page: tight margins/fonts and a cap on how many
+# bullets render per role (reordering already put the most relevant ones first,
+# so truncating after reorder keeps the highest-signal bullets).
+DEFAULT_MAX_BULLETS_PER_ROLE = 4
+
+
+def _tighten(paragraph, space_after: int = 2, space_before: int = 0) -> None:
+    fmt = paragraph.paragraph_format
+    fmt.space_after = Pt(space_after)
+    fmt.space_before = Pt(space_before)
+    fmt.line_spacing_rule = WD_LINE_SPACING.SINGLE
+
+
+def _tighten_format(fmt, space_after: int = 2, space_before: int = 0) -> None:
+    fmt.space_after = Pt(space_after)
+    fmt.space_before = Pt(space_before)
+    fmt.line_spacing_rule = WD_LINE_SPACING.SINGLE
 
 
 def _reorder(items: list, order: list[int] | None) -> list:
@@ -43,26 +62,48 @@ def _reorder_by_name(names: list[str], highlight: list[str] | None) -> list[str]
 
 def render(resume_profile: dict, tailoring: dict, output_path: Path) -> None:
     tailoring = tailoring or {}
+    max_bullets = tailoring.get("max_bullets_per_role", DEFAULT_MAX_BULLETS_PER_ROLE)
     doc = Document()
+
+    section = doc.sections[0]
+    section.page_height, section.page_width = Cm(29.7), Cm(21.0)  # A4
+    section.top_margin = section.bottom_margin = Cm(1.27)
+    section.left_margin = section.right_margin = Cm(1.5)
 
     style = doc.styles["Normal"]
     style.font.name = "Calibri"
-    style.font.size = Pt(10.5)
+    style.font.size = Pt(10)
+    _tighten_format(style.paragraph_format)
+
+    bullet_style = doc.styles["List Bullet"]
+    bullet_style.font.name = "Calibri"
+    bullet_style.font.size = Pt(9.5)
+    _tighten_format(bullet_style.paragraph_format, space_after=1)
 
     contact = resume_profile["contact"]
     title = doc.add_heading(contact["name"], level=0)
     title.alignment = 1
+    title.runs[0].font.size = Pt(18)
+    _tighten(title, space_after=1)
 
     contact_line = " | ".join(
         v for v in [contact.get("phone"), contact.get("email"), contact.get("linkedin"), contact.get("github")] if v
     )
     p = doc.add_paragraph(contact_line)
     p.alignment = 1
+    p.runs[0].font.size = Pt(9.5)
+    _tighten(p, space_after=6)
 
-    doc.add_heading("Professional Summary", level=1)
-    doc.add_paragraph(tailoring.get("summary") or resume_profile["summary_base"].strip())
+    def section_heading(text: str):
+        h = doc.add_heading(text, level=1)
+        h.runs[0].font.size = Pt(11.5)
+        _tighten(h, space_before=6, space_after=2)
+        return h
 
-    doc.add_heading("Technical Skills", level=1)
+    section_heading("Professional Summary")
+    _tighten(doc.add_paragraph(tailoring.get("summary") or resume_profile["summary_base"].strip()))
+
+    section_heading("Technical Skills")
     skills = resume_profile["skills"]
     highlight = tailoring.get("skills_highlight", [])
     labels = {
@@ -79,41 +120,43 @@ def render(resume_profile: dict, tailoring: dict, output_path: Path) -> None:
         if not values:
             continue
         ordered = _reorder_by_name(values, highlight)
-        doc.add_paragraph(f"{label}: {', '.join(ordered)}")
+        _tighten(doc.add_paragraph(f"{label}: {', '.join(ordered)}"))
 
-    doc.add_heading("Experience", level=1)
+    section_heading("Experience")
     experience_order = tailoring.get("experience_order", {})
     for role in resume_profile["experience"]:
         heading = doc.add_paragraph()
-        run = heading.add_run(f"{role['title']} — {role['company']}")
+        run = heading.add_run(f"{role['title']} — {role['company']} ({role['start']} to {role['end']})")
         run.bold = True
-        doc.add_paragraph(f"{role['start']} to {role['end']}").italic = True
+        _tighten(heading, space_before=4)
 
         bullets = [b["text"] for b in role["bullets"]]
         bullets = _reorder(bullets, experience_order.get(role["company"]))
-        for bullet_text in bullets:
+        for bullet_text in bullets[:max_bullets]:
             doc.add_paragraph(bullet_text, style="List Bullet")
 
     if resume_profile.get("open_source"):
-        doc.add_heading("Open Source Contributions", level=1)
+        section_heading("Open Source Contributions")
         for proj in resume_profile["open_source"]:
             p = doc.add_paragraph()
             run = p.add_run(f"{proj['project']} — {proj['role']}")
             run.bold = True
-            for bullet_text in proj["bullets"]:
+            _tighten(p)
+            for bullet_text in proj["bullets"][:2]:
                 doc.add_paragraph(bullet_text, style="List Bullet")
 
     if resume_profile.get("achievements"):
-        doc.add_heading("Achievements & Awards", level=1)
+        section_heading("Achievements & Awards")
         for ach in resume_profile["achievements"]:
             p = doc.add_paragraph()
             run = p.add_run(f"{ach['title']}: ")
             run.bold = True
             p.add_run(ach["text"])
+            _tighten(p)
 
-    doc.add_heading("Education", level=1)
+    section_heading("Education")
     for edu in resume_profile["education"]:
-        doc.add_paragraph(f"{edu['school']} — {edu['degree']} ({edu['start']}-{edu['end']})")
+        _tighten(doc.add_paragraph(f"{edu['school']} — {edu['degree']} ({edu['start']}-{edu['end']})"))
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     doc.save(str(output_path))
