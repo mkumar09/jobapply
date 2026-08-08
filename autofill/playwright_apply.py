@@ -87,6 +87,10 @@ def main() -> None:
 
             page = browser.new_page()
             page.goto(job["url"], wait_until="domcontentloaded")
+            try:
+                page.wait_for_load_state("networkidle", timeout=8000)
+            except Exception:
+                pass  # some forms poll/long-connect and never go fully idle; proceed anyway
 
             try:
                 results = filler(page, contact, resume_path)
@@ -96,6 +100,8 @@ def main() -> None:
 
             for field, ok in results.items():
                 print(f"  {'OK ' if ok else 'MISS'} {field}")
+            if not results.get("resume"):
+                print(f"  -> Attach the resume manually: {resume_path}")
 
             answer = input(
                 "\nReview the form in the browser window. Fill anything missed, then submit it yourself.\n"
