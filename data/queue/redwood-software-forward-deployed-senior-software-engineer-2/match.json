@@ -1,0 +1,4 @@
+{
+  "score": 72,
+  "rationale": "Strong thematic match: the role centers on building migration tooling/automation frameworks for customer onboarding, directly analogous to profile's large-scale DB2-to-PostgreSQL migration pipeline (500M+ records, zero data loss) and Terraform IaC module work, even though it's a customer-facing forward-deployed role."
+}

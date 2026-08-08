@@ -1,0 +1,4 @@
+{
+  "score": 38,
+  "rationale": "JD's core stack is Golang and Python with service mesh (Istio/Linkerd) and vector/graph search; profile's primary languages are Java/C#, with Python/Go only listed as scripting/familiar, a weak fit despite general distributed-systems overlap."
+}
