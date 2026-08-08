@@ -29,6 +29,30 @@ from autofill.selectors import FILLERS  # noqa: E402
 QUEUE_DIR = ROOT / "data" / "queue"
 RESUME_PROFILE_FILE = ROOT / "data" / "resume_profile.yaml"
 
+APPLY_BUTTON_TEXTS = ["Apply for this Job", "Apply for this job", "Apply Now", "Apply for this position", "Apply"]
+
+
+def _reveal_application_form(page) -> None:
+    """Some postings (seen on Ashby) show a job-description page first, with
+    the actual form only appearing after clicking an Apply button/link. If the
+    page looks like it has no real form yet, try clicking one."""
+    if page.locator("input, textarea").count() >= 3:
+        return  # form already present
+    for text in APPLY_BUTTON_TEXTS:
+        try:
+            btn = page.get_by_text(text, exact=False).first
+            if btn.count() > 0:
+                btn.click()
+                page.wait_for_load_state("domcontentloaded", timeout=8000)
+                try:
+                    page.wait_for_load_state("networkidle", timeout=8000)
+                except Exception:
+                    pass
+                if page.locator("input, textarea").count() >= 3:
+                    return
+        except Exception:
+            continue
+
 
 def load_contact() -> dict:
     with open(RESUME_PROFILE_FILE, "r", encoding="utf-8") as f:
@@ -91,6 +115,8 @@ def main() -> None:
                 page.wait_for_load_state("networkidle", timeout=8000)
             except Exception:
                 pass  # some forms poll/long-connect and never go fully idle; proceed anyway
+
+            _reveal_application_form(page)
 
             try:
                 results = filler(page, contact, resume_path)

@@ -124,15 +124,26 @@ def fill_lever(page, contact: dict, resume_path: Path) -> dict:
 
 
 def fill_ashby(page, contact: dict, resume_path: Path) -> dict:
-    """Ashby forms are React-driven with less predictable `name` attributes,
-    so this relies entirely on matching visible label text."""
+    """Ashby's application form only exists after clicking an "Apply" button
+    on the job description page (handled by the caller before this runs).
+    Its core fields use stable `_systemfield_*` names regardless of posting;
+    everything else (phone, LinkedIn, custom questions) has posting-specific
+    random ids, so those fall back to label text matching."""
     results = {}
-    results["name"] = _try_fill_by_label(page, ["Name"], contact["name"])
-    results["email"] = _try_fill_by_label(page, ["Email"], contact["email"])
-    results["phone"] = _try_fill_by_label(page, ["Phone"], contact["phone"])
+    results["name"] = _try_fill(page, ["input[name='_systemfield_name']"], contact["name"]) or _try_fill_by_label(
+        page, ["Name"], contact["name"]
+    )
+    results["email"] = _try_fill(page, ["input[name='_systemfield_email']"], contact["email"]) or _try_fill_by_label(
+        page, ["Email"], contact["email"]
+    )
+    results["phone"] = _try_fill(page, ["input[type='tel']"], contact["phone"]) or _try_fill_by_label(
+        page, ["Phone"], contact["phone"]
+    )
     if contact.get("linkedin"):
         results["linkedin"] = _try_fill_by_label(page, ["LinkedIn"], contact["linkedin"])
-    results["resume"] = _try_upload_by_label(page, ["Resume", "Resume/CV"], resume_path)
+    results["resume"] = _try_upload(
+        page, ["input[name='_systemfield_resume']"], resume_path
+    ) or _try_upload_by_label(page, ["Resume", "Resume/CV"], resume_path)
     return results
 
 
