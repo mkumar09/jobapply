@@ -29,7 +29,109 @@ companies:
 - provider: greenhouse
   token: crashplan
   name: CrashPlan
+- provider: greenhouse
+  token: coupang
+  name: Coupang
+- provider: greenhouse
+  token: alphasenseindia
+  name: AlphaSense
+- provider: greenhouse
+  token: currenciesdirect
+  name: Currencies Direct
+- provider: ashby
+  token: delinea
+  name: Delinea
+- provider: greenhouse
+  token: earnin
+  name: EarnIn
+- provider: greenhouse
+  token: globalhealthcareexchangeinc
+  name: GHX
+- provider: greenhouse
+  token: redwoodsoftware
+  name: Redwood Software
+- provider: greenhouse
+  token: ensono
+  name: Ensono
+- provider: lever
+  token: sonarsource
+  name: Sonar
+- provider: lever
+  token: Onehouse
+  name: Onehouse
+- provider: lever
+  token: stable-money1
+  name: Stable Money
+- provider: lever
+  token: paytm
+  name: Paytm
+- provider: lever
+  token: termgrid
+  name: Termgrid
+- provider: ashby
+  token: Aspora
+  name: Aspora
+- provider: ashby
+  token: reacher
+  name: Reacher
+- provider: ashby
+  token: articul8
+  name: Articul8
+- provider: ashby
+  token: ema
+  name: Ema
 candidates:
+- provider: greenhouse
+  token: coupang
+  name: Coupang
+- provider: greenhouse
+  token: alphasenseindia
+  name: AlphaSense
+- provider: greenhouse
+  token: currenciesdirect
+  name: Currencies Direct
+- provider: ashby
+  token: delinea
+  name: Delinea
+- provider: greenhouse
+  token: earnin
+  name: EarnIn
+- provider: greenhouse
+  token: globalhealthcareexchangeinc
+  name: GHX
+- provider: greenhouse
+  token: redwoodsoftware
+  name: Redwood Software
+- provider: greenhouse
+  token: ensono
+  name: Ensono
+- provider: lever
+  token: sonarsource
+  name: Sonar
+- provider: lever
+  token: Onehouse
+  name: Onehouse
+- provider: lever
+  token: stable-money1
+  name: Stable Money
+- provider: lever
+  token: paytm
+  name: Paytm
+- provider: lever
+  token: termgrid
+  name: Termgrid
+- provider: ashby
+  token: Aspora
+  name: Aspora
+- provider: ashby
+  token: reacher
+  name: Reacher
+- provider: ashby
+  token: articul8
+  name: Articul8
+- provider: ashby
+  token: ema
+  name: Ema
 - provider: greenhouse
   token: tide
   name: Tide
