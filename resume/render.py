@@ -19,6 +19,8 @@ from pathlib import Path
 
 import yaml
 from docx import Document
+from docx.oxml.ns import qn
+from docx.oxml import OxmlElement
 from docx.shared import Cm, Pt
 from docx.enum.text import WD_LINE_SPACING
 
@@ -41,6 +43,45 @@ def _tighten_format(fmt, space_after: int = 2, space_before: int = 0) -> None:
     fmt.space_after = Pt(space_after)
     fmt.space_before = Pt(space_before)
     fmt.line_spacing_rule = WD_LINE_SPACING.SINGLE
+
+
+def _add_hyperlink(paragraph, url: str, text: str, bold: bool = False, size_pt: float = 9.5) -> None:
+    """Adds a clickable hyperlink run to a paragraph (python-docx has no
+    built-in API for this; this is the standard OOXML-level workaround).
+    Note: hyperlink runs live under w:hyperlink, not directly under w:p, so
+    they don't show up in `paragraph.runs` — set size/bold here, not after."""
+    part = paragraph.part
+    r_id = part.relate_to(
+        url, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink", is_external=True
+    )
+
+    hyperlink = OxmlElement("w:hyperlink")
+    hyperlink.set(qn("r:id"), r_id)
+
+    run_elem = OxmlElement("w:r")
+    run_props = OxmlElement("w:rPr")
+
+    color = OxmlElement("w:color")
+    color.set(qn("w:val"), "1155CC")
+    run_props.append(color)
+
+    underline = OxmlElement("w:u")
+    underline.set(qn("w:val"), "single")
+    run_props.append(underline)
+
+    size = OxmlElement("w:sz")
+    size.set(qn("w:val"), str(int(size_pt * 2)))  # half-points
+    run_props.append(size)
+
+    if bold:
+        run_props.append(OxmlElement("w:b"))
+
+    run_elem.append(run_props)
+    text_elem = OxmlElement("w:t")
+    text_elem.text = text
+    run_elem.append(text_elem)
+    hyperlink.append(run_elem)
+    paragraph._p.append(hyperlink)
 
 
 def _reorder(items: list, order: list[int] | None) -> list:
@@ -86,13 +127,21 @@ def render(resume_profile: dict, tailoring: dict, output_path: Path) -> None:
     title.runs[0].font.size = Pt(18)
     _tighten(title, space_after=1)
 
-    contact_line = " | ".join(
-        v for v in [contact.get("phone"), contact.get("email"), contact.get("linkedin"), contact.get("github")] if v
-    )
-    p = doc.add_paragraph(contact_line)
+    p = doc.add_paragraph()
     p.alignment = 1
-    p.runs[0].font.size = Pt(9.5)
     _tighten(p, space_after=6)
+    parts = [("text", contact["phone"]), ("text", contact["email"])]
+    if contact.get("linkedin"):
+        parts.append(("link", contact["linkedin"]))
+    if contact.get("github"):
+        parts.append(("link", contact["github"]))
+    for i, (kind, value) in enumerate(parts):
+        if i > 0:
+            p.add_run(" | ").font.size = Pt(9.5)
+        if kind == "link":
+            _add_hyperlink(p, value, value)
+        else:
+            p.add_run(value).font.size = Pt(9.5)
 
     def section_heading(text: str):
         h = doc.add_heading(text, level=1)
@@ -139,11 +188,21 @@ def render(resume_profile: dict, tailoring: dict, output_path: Path) -> None:
         section_heading("Open Source Contributions")
         for proj in resume_profile["open_source"]:
             p = doc.add_paragraph()
-            run = p.add_run(f"{proj['project']} — {proj['role']}")
-            run.bold = True
             _tighten(p)
-            for bullet_text in proj["bullets"][:2]:
-                doc.add_paragraph(bullet_text, style="List Bullet")
+            if proj.get("project_url"):
+                _add_hyperlink(p, proj["project_url"], proj["project"], bold=True, size_pt=10)
+            else:
+                p.add_run(proj["project"]).bold = True
+            p.add_run(f" — {proj['role']}").bold = True
+
+            for bullet in proj["bullets"][:2]:
+                # bullets may be a plain string or {text, links: [{label, url}]}
+                text = bullet["text"] if isinstance(bullet, dict) else bullet
+                links = bullet.get("links", []) if isinstance(bullet, dict) else []
+                bp = doc.add_paragraph(text, style="List Bullet")
+                for link in links:
+                    bp.add_run(" ")
+                    _add_hyperlink(bp, link["url"], link["label"], size_pt=9.5)
 
     if resume_profile.get("achievements"):
         section_heading("Achievements & Awards")

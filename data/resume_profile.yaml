@@ -64,10 +64,15 @@ experience:
 
 open_source:
   - project: "JabRef - Open Source Reference and Citation Manager (4K+ GitHub Stars)"
+    project_url: "https://github.com/JabRef/jabref"
     role: "Contributor"
     bullets:
-      - "Active contributor to JabRef, a widely-used open-source reference manager, delivered user-facing features and critical bug fixes including linked identifier icon implementation and tooltip rendering on empty rows (PRs #9925, #13266)."
-      - "Engaged in peer code reviews, issue triage, and cross-timezone collaboration, demonstrating strong debugging skills, code quality ownership, and passion for building high-quality software in a large distributed Java codebase."
+      - text: "Active contributor to JabRef, a widely-used open-source reference manager, delivered user-facing features and critical bug fixes including linked identifier icon implementation and tooltip rendering on empty rows (PRs #9925, #13266)."
+        links:
+          - {label: "PR #9925", url: "https://github.com/JabRef/jabref/pull/9925"}
+          - {label: "PR #13266", url: "https://github.com/JabRef/jabref/pull/13266"}
+      - text: "Engaged in peer code reviews, issue triage, and cross-timezone collaboration, demonstrating strong debugging skills, code quality ownership, and passion for building high-quality software in a large distributed Java codebase."
+        links: []
 
 achievements:
   - title: "DBRockstar"
