@@ -6,8 +6,8 @@ contact:
   name: "Mahendra Kumar"
   phone: "+91 9523300107"
   email: "workwithmahendrakumar@gmail.com"
-  linkedin: ""   # fill in full URL
-  github: ""     # fill in full URL
+  linkedin: "https://www.linkedin.com/in/mahendrakumar09"
+  github: "https://www.github.com/mkumar09"
 
 summary_base: >
   Senior Engineer with 6+ years of experience building scalable distributed systems
