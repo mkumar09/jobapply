@@ -1,0 +1,4 @@
+{
+  "score": 82,
+  "rationale": "Strong match: JD requires 5+ yrs Java (profile has 6+), REST API design, SQL/relational schema design, and a DI framework such as Spring \u2014 all present. Spring Boot/Spring MVC listed as nice-to-have and present in profile. TDD/testability experience (92%+ JUnit coverage) directly addresses their 'code for testability' requirement. No Kafka/AWS emphasis in this JD, which the profile has as extra, unused strengths."
+}
