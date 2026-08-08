@@ -1,0 +1,82 @@
+# Structured version of Mahendra's resume, used as the source of truth for
+# match-scoring and per-JD tailoring. Keep this in sync with the actual resume;
+# tailoring only ever reorders/re-emphasizes this content, it never invents facts.
+
+contact:
+  name: "Mahendra Kumar"
+  phone: "+91 9523300107"
+  email: "workwithmahendrakumar@gmail.com"
+  linkedin: ""   # fill in full URL
+  github: ""     # fill in full URL
+
+summary_base: >
+  Senior Engineer with 6+ years of experience building scalable distributed systems
+  using Java, C# and Spring Boot. Architected high-impact migrations and designed
+  systems handling $80K+ daily.
+
+skills:
+  languages: ["Java", "Python (scripting)", "C#", "Bash/Shell", "Go (familiar)"]
+  frameworks: ["Spring Boot", "Spring Cloud", "Spring Security", "REST APIs", ".NET Core", ".NET MVC"]
+  distributed_systems: ["Microservices", "event-driven architecture", "Apache Kafka", "idempotency", "ACID guarantees"]
+  cloud_infra: ["AWS (EC2, RDS, DMS, S3, CloudWatch)", "Terraform (IaC)", "Docker", "Kubernetes", "CI/CD"]
+  databases: ["PostgreSQL", "MS-SQL Server (query optimization, debugging, performance tuning)"]
+  tooling: ["Git/GitHub", "JIRA", "Agile/Scrum", "TDD (JUnit, 92%+ coverage)", "Code Reviews", "Linux"]
+  ai: ["RAG", "Agentic AI", "MCP", "HuggingFace", "OpenAI API integration"]
+
+experience:
+  - company: "Standard Chartered Bank (via Capgemini)"
+    title: "Senior Backend Engineer"
+    start: "2024-05"
+    end: "present"
+    bullets:
+      - text: "Owned end-to-end design and implementation of a large-scale distributed data migration pipeline, migrating 500M+ customer records from DB2 to PostgreSQL with zero data loss and <1% performance degradation on AWS."
+        tags: ["aws", "postgresql", "distributed systems", "migration"]
+      - text: "Drove reliability and correctness by owning idempotency for a high-throughput transaction processing engine, designing request deduplication logic and ensuring exactly-once processing of financial operations with full ACID guarantees in a distributed environment."
+        tags: ["distributed systems", "idempotency", "acid"]
+      - text: "Designed and productionized reusable Terraform infrastructure modules for a multi-year AWS DMS pipeline, reducing deployment man-hours by 33%, improving repeatability, and hardening the system against operational failures."
+        tags: ["aws", "terraform", "infra"]
+      - text: "Performed in-depth root cause analysis on pipeline failures and performance bottlenecks, implementing targeted code fixes and monitoring improvements that maintained SLAs across a mission-critical financial data platform."
+        tags: ["debugging", "performance", "sql"]
+
+  - company: "eShakti"
+    title: "Software Development Engineer - Backend"
+    start: "2021-11"
+    end: "2024-05"
+    bullets:
+      - text: "Owned and developed a complete feature set for an in-house distributed platform (Tools-MVC) serving billing, logistics, fabric, and finance teams, engaging with stakeholders to define scope, timelines, and delivery commitments."
+        tags: ["java", "spring boot", "distributed systems"]
+      - text: "Architected a highly-available Java/Spring Boot invoicing microservice handling $80,000+ in daily transactions designed for scalability, fault-tolerance, and performance under high load on a SaaS microservices architecture."
+        tags: ["java", "spring boot", "microservices"]
+      - text: "Designed and implemented a scalable asynchronous Email Notification Service processing 5,000+ emails/day, increasing email click-through rate by 12% and contributing to improved user retention through reliable event-driven delivery."
+        tags: ["java", "event-driven architecture", "kafka"]
+      - text: "Diagnosed and resolved complex functional and performance defects across the distributed system, collaborating with QA and support teams to reproduce issues, implement fixes, and deliver patches with rapid turnaround."
+        tags: ["debugging", "distributed systems"]
+
+  - company: "Oracle Cerner"
+    title: "Software Engineer"
+    start: "2019-09"
+    end: "2021-06"
+    bullets:
+      - text: "Built production-grade Java/Spring Boot distributed services with 92% JUnit test coverage, applying strong testing methodologies, TDD, and code review practices to deliver high-quality components for healthcare enterprise systems."
+        tags: ["java", "spring boot", "tdd"]
+      - text: "Collaborated with cross-functional teams (QA, architects, field teams) to troubleshoot complex customer issues, articulating design decisions, communicating scope and timelines clearly, and delivering solutions with strong analytical rigour."
+        tags: ["communication", "debugging"]
+
+open_source:
+  - project: "JabRef - Open Source Reference and Citation Manager (4K+ GitHub Stars)"
+    role: "Contributor"
+    bullets:
+      - "Active contributor to JabRef, a widely-used open-source reference manager, delivered user-facing features and critical bug fixes including linked identifier icon implementation and tooltip rendering on empty rows (PRs #9925, #13266)."
+      - "Engaged in peer code reviews, issue triage, and cross-timezone collaboration, demonstrating strong debugging skills, code quality ownership, and passion for building high-quality software in a large distributed Java codebase."
+
+achievements:
+  - title: "DBRockstar"
+    text: "Performed in-depth root cause analysis on a critical SQL performance bottleneck, reducing execution from 10 min to 9 sec (98.5% improvement), unblocking a high-throughput production data pipeline at Oracle Cerner."
+  - title: "Simplify"
+    text: "Diagnosed and resolved a critical application regression using systematic debugging, restoring seamless customer-facing workflow and enhancing overall user experience at Oracle Cerner."
+
+education:
+  - school: "Sri Jayachamarajendra College of Engineering, Mysuru"
+    degree: "B.E. in Information Science"
+    start: "2015"
+    end: "2019"

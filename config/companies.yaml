@@ -1,0 +1,74 @@
+companies:
+- provider: greenhouse
+  token: postman
+  name: Postman
+- provider: greenhouse
+  token: groww
+  name: Groww
+- provider: lever
+  token: zeta
+  name: Zeta
+- provider: lever
+  token: meesho
+  name: Meesho
+- provider: greenhouse
+  token: encora10
+  name: Encora
+- provider: greenhouse
+  token: octus
+  name: Octus
+- provider: greenhouse
+  token: forwardnetworks
+  name: Forward Networks
+- provider: greenhouse
+  token: behavox
+  name: Behavox
+- provider: greenhouse
+  token: gr8tech
+  name: GR8 Tech
+- provider: greenhouse
+  token: crashplan
+  name: CrashPlan
+candidates:
+- provider: greenhouse
+  token: razorpay
+  name: Razorpay
+- provider: greenhouse
+  token: cred
+  name: CRED
+- provider: greenhouse
+  token: chargebee
+  name: Chargebee
+- provider: greenhouse
+  token: postman
+  name: Postman
+- provider: greenhouse
+  token: groww
+  name: Groww
+- provider: lever
+  token: zeta
+  name: Zeta
+- provider: lever
+  token: meesho
+  name: Meesho
+- provider: ashby
+  token: juspay
+  name: Juspay
+- provider: greenhouse
+  token: encora10
+  name: Encora
+- provider: greenhouse
+  token: octus
+  name: Octus
+- provider: greenhouse
+  token: forwardnetworks
+  name: Forward Networks
+- provider: greenhouse
+  token: behavox
+  name: Behavox
+- provider: greenhouse
+  token: gr8tech
+  name: GR8 Tech
+- provider: greenhouse
+  token: crashplan
+  name: CrashPlan

@@ -1,0 +1,86 @@
+# Target role / filtering configuration for the job scraper and prefilter.
+
+# A title passes if it contains at least one seniority keyword AND at least one
+# role keyword (e.g. "Senior Java Developer" = "senior" + "developer"), and no
+# exclude keyword. This catches "Developer"-titled roles as well as "Engineer".
+seniority_keywords:
+  - "senior"
+  - "staff"
+  - "lead"
+  - "principal"
+  - "sde 3"
+  - "sde3"
+  - "sde-3"
+  - "sde ii"
+  - "sde 2"
+  - "sde2"
+  - "sde-2"
+  - "iii"
+
+role_keywords:
+  - "engineer"
+  - "developer"
+  - "programmer"
+  - "architect"
+
+exclude_titles:
+  # Hard-excluded even if seniority+role keywords match (e.g. avoid junior/intern roles)
+  - "intern"
+  - "junior"
+  - "sde 1"
+  - "sde1"
+  - "sde-1"
+  - "entry level"
+  - "frontend"
+  - "front-end"
+  - "front end"
+  - "qa "
+  - "quality assurance"
+  - "test engineer"
+  - "tester"
+
+locations:
+  # A job passes the location filter if its location text contains any of these
+  # (case-insensitive). Empty/blank location text is treated as "unspecified" and
+  # kept for manual review rather than auto-dropped.
+  - "india"
+  - "remote"
+  - "bangalore"
+  - "bengaluru"
+  - "hyderabad"
+  - "pune"
+  - "chennai"
+  - "gurugram"
+  - "gurgaon"
+  - "noida"
+  - "delhi"
+  - "mumbai"
+
+skills:
+  # Used by matching/prefilter.py for keyword-overlap scoring. Weight = importance.
+  core:
+    - {name: "Java", weight: 3}
+    - {name: "Spring Boot", weight: 3}
+    - {name: "Spring Cloud", weight: 2}
+    - {name: "C#", weight: 3}
+    - {name: ".NET", weight: 3}
+    - {name: ".NET Core", weight: 3}
+    - {name: "SQL", weight: 2}
+    - {name: "Kafka", weight: 2}
+    - {name: "AWS", weight: 2}
+  secondary:
+    - {name: "Microservices", weight: 1}
+    - {name: "PostgreSQL", weight: 1}
+    - {name: "Docker", weight: 1}
+    - {name: "Kubernetes", weight: 1}
+    - {name: "Terraform", weight: 1}
+    - {name: "REST", weight: 1}
+    - {name: "distributed systems", weight: 1}
+
+# Cheap prefilter threshold (0-100). Jobs scoring below this are dropped before
+# spending an LLM call on them during the scheduled routine.
+prefilter_min_score: 25
+
+# Claude match-score threshold (0-100) above which a job gets a tailored resume
+# and moves to "ready_to_apply" instead of just "scored".
+apply_min_score: 70
