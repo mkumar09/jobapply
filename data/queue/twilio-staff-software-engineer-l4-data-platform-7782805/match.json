@@ -1,0 +1,4 @@
+{
+  "score": 52,
+  "rationale": "Some overlap: Java, AWS (EC2/RDS/DMS/S3), Kafka, distributed systems, and a large-scale data migration (500M+ records DB2->PostgreSQL on AWS) align with the data-platform theme. But the JD requires 8+ years (resume shows 6+) and deep expertise in big-data/lakehouse tech (Hadoop, Spark, Hudi/Iceberg/Delta) that is not present anywhere in resume_profile.yaml, so the core technical bar for this Staff data-infrastructure role is not met."
+}

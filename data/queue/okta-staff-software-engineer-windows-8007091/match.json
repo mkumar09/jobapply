@@ -1,0 +1,4 @@
+{
+  "score": 20,
+  "rationale": "JD requires deep Windows client software development in C++/C#/.NET, Win32 API, IPC, and Windows services. Profile lists C#, .NET Core, and .NET MVC as skills, but every experience bullet describes backend/distributed-systems work (Java/Spring Boot microservices, AWS data migrations) with no Windows client, C++, or Win32 API experience."
+}

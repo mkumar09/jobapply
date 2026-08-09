@@ -1,0 +1,4 @@
+{
+  "score": 72,
+  "rationale": "Strong thematic and technical overlap for an Email platform role: resume_profile.yaml shows a scalable asynchronous Email Notification Service (5,000+ emails/day, event-driven, Kafka-based, +12% CTR) built with Java/Spring Boot, plus a high-throughput distributed transaction engine (idempotency, ACID) and a large AWS-based data migration -- directly matching the JD's 'highly available, scalable, fault-tolerant distributed systems' and desired Kafka/AWS/Docker/Kubernetes skills. Gap: JD asks for 8+ years (resume shows 6+) and lists Golang as a preferred language (resume shows only 'Go (familiar)'), which keep this from scoring higher."
+}

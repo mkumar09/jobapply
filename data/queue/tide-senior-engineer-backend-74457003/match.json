@@ -1,0 +1,4 @@
+{
+  "score": 86,
+  "rationale": "Strong overlap: JD's Java, Spring Boot, event-driven microservices (SNS+SQS/Kafka), PostgreSQL via Aurora, AWS, Docker, Terraform, Kubernetes (EKS), and CI/CD all match the profile's skills and experience -- AWS data migration pipeline (500M+ records, zero data loss), Kafka-based event-driven notification service, idempotency/ACID transaction-processing work, Terraform IaC modules, and 92%+ JUnit test coverage. Title (Senior Engineer, Backend) and location (Hyderabad, India) both match directly."
+}

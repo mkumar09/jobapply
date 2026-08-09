@@ -1,0 +1,4 @@
+{
+  "score": 37,
+  "rationale": "JD needs hands-on production ML engineering: building/deploying ML models and infrastructure, LLM/RAG/prompt-engineering/fine-tuning work, workflow engines (Dagster/MLFlow/KubeFlow), and ideally real-time voice/speech (ASR) experience. resume_profile.yaml lists RAG, Agentic AI, MCP, HuggingFace, and OpenAI API integration only as skill tags with no corresponding experience bullets showing shipped ML/voice systems -- his actual experience is backend Java/Spring Boot engineering. The backend language requirement (Java/Python) and distributed-systems skills do overlap, but the core ML/voice substance of the role is not backed by documented experience."
+}

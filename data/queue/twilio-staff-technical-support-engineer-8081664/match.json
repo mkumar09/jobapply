@@ -1,0 +1,4 @@
+{
+  "score": 28,
+  "rationale": "This is a customer-facing Technical Support Engineer role (case management, escalations, SSO/Auth0 troubleshooting, PCAP/network analysis, customer communication) rather than a software engineering/backend role. resume_profile.yaml shows only backend software engineering experience (Java, Spring Boot, distributed systems) with no support/case-management or PCAP/network-troubleshooting background, so there is little genuine alignment with the JD despite some shared tech surface (SQL, REST APIs, AWS)."
+}

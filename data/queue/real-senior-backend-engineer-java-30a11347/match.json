@@ -1,0 +1,4 @@
+{
+  "score": 65,
+  "rationale": "Near-exact tech match: JD's Java 17+/Spring Boot 3.x, PostgreSQL, Kafka, AWS, Docker, Kubernetes, event-driven microservices, and ACID/transactional correctness all line up with the profile's Standard Chartered and eShakti experience (data migration pipeline, idempotency/ACID transaction engine, Kafka notification service), and the JD's AI-assisted development angle (Claude Code, MCP integrations) matches the profile's RAG/Agentic AI/MCP/OpenAI API skills. However, the posting states 'Location Requirements: Candidates must be based in the United States to be considered,' which the profile (India-based) does not satisfy, so despite the strong technical overlap this is scored down for the hard eligibility mismatch."
+}

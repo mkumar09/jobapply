@@ -1,0 +1,4 @@
+{
+  "score": 80,
+  "rationale": "Strong match: JD asks for 5+ years backend engineering with Java/Go/Python/C#/Ruby, RESTful APIs, distributed systems/inter-service communication, relational databases/SQL, and on-call ownership -- resume_profile.yaml shows 6+ years with exactly this profile (Java/Spring Boot microservices, REST APIs, PostgreSQL/MS-SQL, distributed data migration, idempotency/ACID transaction processing, on-call-style production ownership). Docker/Kubernetes and Terraform/AWS also line up with the 'What Will Make Us Love You' cloud-native/observability preferences. Only gaps are Go (listed as 'familiar' rather than primary) and GCP specifically (resume shows AWS), which are secondary/preferred, not required."
+}

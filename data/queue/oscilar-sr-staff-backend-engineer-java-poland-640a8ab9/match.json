@@ -1,0 +1,4 @@
+{
+  "score": 83,
+  "rationale": "Strong overlap: JD wants scalable, low-latency Java + AWS backend services, microservices, Docker/Kubernetes, Kafka-based distributed data systems, REST APIs, and CI/CD. Profile shows Java/Spring Boot microservices (invoicing service handling $80K+/day), AWS (EC2/RDS/DMS/S3/CloudWatch), a Kafka-based event-driven notification service, Docker, Kubernetes, Terraform-driven CI/CD, and root-cause/performance-bottleneck work matching the 'identify and resolve bottlenecks' requirement. Title level (Senior Backend Engineer) matches the Sr./Staff Backend Engineer posting."
+}

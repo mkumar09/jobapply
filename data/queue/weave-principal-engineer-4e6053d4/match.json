@@ -1,0 +1,4 @@
+{
+  "score": 30,
+  "rationale": "Principal Engineer for Messaging Fellowship requires 12+ years with company-level technical leadership over messaging infrastructure at massive scale. resume_profile.yaml shows 6+ years; while there is real tech overlap (event-driven architecture, Apache Kafka, AWS, an Email Notification Service handling 5,000+ messages/day), that scale and the required years/leadership scope fall well short of a 12+ year Principal-level bar."
+}

@@ -1,0 +1,4 @@
+{
+  "score": 25,
+  "rationale": "JD requires 8+ years of Node.js (JavaScript/TypeScript) backend development plus MongoDB/Redis experience on multi-cloud (AWS/Azure). resume_profile.yaml lists languages as Java, Python (scripting), C#, Bash/Shell, and Go (familiar) -- no JavaScript, TypeScript, or Node.js -- and no MongoDB/Redis experience. AWS familiarity and Staff-level seniority overlap, but the core required tech stack (Node.js backend) is entirely absent from the profile."
+}

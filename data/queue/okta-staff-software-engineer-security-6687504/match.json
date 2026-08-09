@@ -1,0 +1,4 @@
+{
+  "score": 42,
+  "rationale": "JD wants 7+ years of Java plus 3+ years designing dedicated security solutions (OWASP mitigation, cryptography, RBAC/ABAC) and MySQL/Redis/Elasticsearch experience. Profile shows strong Java/Spring Boot/AWS/distributed-systems background and lists Spring Security plus idempotency/ACID guarantees, but no experience bullet describes hands-on application-security engineering, threat modeling, or cryptography work, and there is no MySQL/Redis/Elasticsearch experience in the profile."
+}
