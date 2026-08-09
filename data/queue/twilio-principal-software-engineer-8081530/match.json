@@ -1,0 +1,4 @@
+{
+  "score": 33,
+  "rationale": "Requires 10+ years of experience with at least 5 years in a formal technical leadership role, plus deep expertise in Clickhouse and Spark big-data systems. resume_profile.yaml shows 6+ years total with no formal technical-leadership title and no Clickhouse or Spark experience -- only general AWS/Kafka/Terraform/Java skills overlap, which is not enough to offset the tenure and specialized data-platform expertise gaps."
+}

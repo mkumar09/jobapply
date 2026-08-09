@@ -1,0 +1,4 @@
+{
+  "score": 28,
+  "rationale": "This role explicitly requires 16+ years of experience designing highly-available, mission-critical distributed systems, plus expert Java/Go proficiency and deep AWS ecosystem mastery. resume_profile.yaml shows only 6+ years of experience (2019-present), less than half the stated bar, and the role also expects cross-team technical strategy ownership and telecom regulatory domain expertise not present in the profile. Core tech (Java, AWS, Kafka, Terraform, Kubernetes, distributed systems) does overlap well, but the explicit seniority/tenure requirement is a disqualifying gap."
+}

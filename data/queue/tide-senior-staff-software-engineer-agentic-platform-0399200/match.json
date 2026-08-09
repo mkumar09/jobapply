@@ -1,0 +1,4 @@
+{
+  "score": 60,
+  "rationale": "Tech stack overlap is excellent (Java, Spring Boot, Kafka, AWS/RDS, PostgreSQL, Docker, Terraform, REST, distributed systems all appear in resume_profile skills/experience), and prior regulated-industry work (Standard Chartered Bank, Oracle Cerner) fits the 'highly regulated industries' preference. However, this Senior Staff role explicitly requires defining cross-team platform architecture, providing technical leadership across multiple teams, and owning build-vs-buy strategy for an agentic platform -- scope well beyond the single-team Senior Backend Engineer ownership (one migration pipeline, one team's infra) shown in resume_profile.yaml. No evidence of multi-team technical leadership or agentic-platform production experience."
+}

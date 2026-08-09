@@ -1,0 +1,4 @@
+{
+  "score": 45,
+  "rationale": "Tech overlap is good (Java, AWS, Kafka, microservices, REST, distributed systems, Docker/Kubernetes, SQL/NoSQL all present in resume_profile.yaml), and the India remote location is a plus. But the JD requires 12+ years designing highly-available, high-scale cloud-native SaaS systems; resume_profile.yaml shows 6+ years total, roughly half the required tenure, with no evidence of the principal-level cross-team architectural ownership or multi-regional deployment experience the JD calls for."
+}
