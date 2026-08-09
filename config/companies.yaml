@@ -80,6 +80,57 @@ companies:
 - provider: ashby
   token: ema
   name: Ema
+- provider: greenhouse
+  token: tide
+  name: Tide
+- provider: greenhouse
+  token: okta
+  name: Okta
+- provider: greenhouse
+  token: bloomreach
+  name: Bloomreach
+- provider: greenhouse
+  token: twilio
+  name: Twilio
+- provider: greenhouse
+  token: capco
+  name: Capco
+- provider: greenhouse
+  token: commvault
+  name: Commvault
+- provider: greenhouse
+  token: definian
+  name: Definian
+- provider: greenhouse
+  token: nmi
+  name: NMI
+- provider: greenhouse
+  token: mitratech
+  name: Mitratech
+- provider: greenhouse
+  token: poppulo
+  name: Poppulo
+- provider: lever
+  token: 3pillarglobal
+  name: 3Pillar Global
+- provider: lever
+  token: remofirst
+  name: RemoFirst
+- provider: ashby
+  token: real
+  name: Real
+- provider: ashby
+  token: oscilar
+  name: Oscilar
+- provider: ashby
+  token: weave
+  name: Weave
+- provider: lever
+  token: tala
+  name: Tala
+- provider: lever
+  token: gohighlevel
+  name: HighLevel
 candidates:
 - provider: greenhouse
   token: coupang
@@ -219,3 +270,12 @@ candidates:
 - provider: greenhouse
   token: crashplan
   name: CrashPlan
+- provider: ashby
+  token: weave
+  name: Weave
+- provider: lever
+  token: tala
+  name: Tala
+- provider: lever
+  token: gohighlevel
+  name: HighLevel
