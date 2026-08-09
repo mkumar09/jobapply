@@ -1,0 +1,4 @@
+{
+  "score": 38,
+  "rationale": "Some backend overlap (Java, PostgreSQL, AWS, Kafka, Docker), but this is a Staff-level 'Fullstack' role requiring React/Angular/Vue frontend experience and 9+ years, and preferring Go/C++ for backend. resume_profile.yaml has no frontend framework experience, only 'familiar' (not professional) Go, and shows 6+ years at Senior level, not Staff."
+}

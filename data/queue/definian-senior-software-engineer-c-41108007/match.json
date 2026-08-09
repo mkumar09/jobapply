@@ -1,0 +1,4 @@
+{
+  "score": 40,
+  "rationale": "Resume_profile.yaml lists C# and .NET Core/.NET MVC as skills, matching the JD's language requirement, but every experience bullet in the profile is Java/Spring Boot based \u2014 there is no demonstrated C# project history, and none of the JD's core work (WPF desktop UI, COBOL-to-C# legacy modernization) is represented in the profile at all."
+}

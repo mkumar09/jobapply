@@ -1,0 +1,1 @@
+{"score": 33, "rationale": "JD's core stack is Node.js/TypeScript with React, none of which appear in resume_profile.yaml (Java, C#, .NET are the listed languages, not JS/Node). PostgreSQL, Docker, and AWS overlap partially, but the primary required backend language is a hard mismatch."}

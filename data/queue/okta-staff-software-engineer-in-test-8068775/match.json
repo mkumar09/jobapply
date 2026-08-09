@@ -1,0 +1,4 @@
+{
+  "score": 26,
+  "rationale": "This is a Staff Software Engineer in Test / QE role requiring 5+ years of dedicated quality-engineering experience, test automation frameworks (Selenium, TestCafe, Postman, JMeter, Locust), and non-HTTP protocol testing (SSH, RDP, TLS, LDAP). Mahendra's resume_profile.yaml shows strong TDD/JUnit practice (92%+ coverage) and Java/AWS/Kubernetes/distributed-systems familiarity as a backend developer, but no dedicated QE/test-automation role or experience with the specific tooling (Selenium, JMeter, Locust) the JD requires. His background is software development, not quality engineering, so the role focus does not match despite some keyword overlap."
+}

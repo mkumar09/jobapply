@@ -1,0 +1,4 @@
+{
+  "score": 52,
+  "rationale": "The backend half of this role is a strong match: Java + Spring Boot for distributed microservices, MySQL/PostgreSQL, event-driven architecture and message queues (Kafka), and REST API design all line up closely with Mahendra's experience at Standard Chartered and eShakti. However, the JD explicitly requires 'strong, hands-on experience with modern JavaScript/TypeScript frameworks (React, Redux...)' as a full-stack Staff engineer who owns UI through backend end-to-end, and resume_profile.yaml shows no frontend/React/JavaScript framework experience at all. That required, not optional, frontend skill gap pulls an otherwise strong backend match below the bar for this specifically full-stack role."
+}

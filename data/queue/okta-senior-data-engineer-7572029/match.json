@@ -1,0 +1,1 @@
+{"score": 32, "rationale": "JD requires Snowflake, dbt, Airflow, and dedicated large-scale data-systems experience, none of which appear in the resume profile. Overlap is limited to SQL, AWS, and Kafka/event-driven exposure; core Java/Spring Boot backend background does not align with this data engineering specialization."}

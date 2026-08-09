@@ -1,0 +1,4 @@
+{
+  "score": 28,
+  "rationale": "JD is centered on application-security automation (SAST/DAST/SCA tooling, OWASP remediation, security scanning pipelines) which resume_profile.yaml has no experience in. General overlap on CI/CD, Docker, Kubernetes, Terraform, Java exists, but the core AppSec domain expertise required for this role is absent from the profile."
+}

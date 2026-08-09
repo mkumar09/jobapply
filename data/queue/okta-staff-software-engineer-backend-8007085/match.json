@@ -1,0 +1,4 @@
+{
+  "score": 82,
+  "rationale": "Strong match: JD calls for 7+ years building scalable, high-performance server-side Java/Spring features, Postgres/MySQL with query optimization, RESTful API design, and CI/CD-driven automated testing -- all directly backed by resume_profile.yaml (Java, Spring Boot, Spring Security, PostgreSQL, MS-SQL query optimization, REST APIs, TDD/JUnit 92%+ coverage, CI/CD). His idempotency/ACID transaction-processing work and AWS-based data migration at Standard Chartered map well to the JD's emphasis on distributed systems, resilient architecture, and scale. Gaps: no direct endpoint/device security (TPM, MDM protocols) or IAM protocol (SAML/OAuth/WebAuthn) experience, and he has 6+ years vs the 7+ years requested, but the core Java/Spring/backend-at-scale overlap is strong."
+}

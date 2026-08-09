@@ -1,0 +1,1 @@
+{"score": 38, "rationale": "JD explicitly requires 3+ years as an SRE or in Cloud Ops/DevOps plus Golang, which the resume profile lacks entirely (Go is only listed as 'familiar'). Some overlap exists via Terraform, AWS, Docker/Kubernetes, and SQL, but the resume's track record is backend software engineering, not SRE/on-call operations."}

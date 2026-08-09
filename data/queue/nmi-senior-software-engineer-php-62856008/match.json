@@ -1,0 +1,4 @@
+{
+  "score": 15,
+  "rationale": "JD requires PHP/Laravel and Vue.js as the core stack. resume_profile.yaml contains no PHP, no Laravel, and no frontend JavaScript framework experience at all \u2014 this is a fundamentally different tech stack from the profile's Java/Spring Boot/C# backend background."
+}

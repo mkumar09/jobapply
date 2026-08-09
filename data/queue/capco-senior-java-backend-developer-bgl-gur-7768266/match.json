@@ -1,0 +1,4 @@
+{
+  "score": 78,
+  "rationale": "Strong match: JD's core stack (Java, Spring Boot microservices, Kafka, PostgreSQL, Docker, Kubernetes, TDD, REST API design, AWS, Terraform) is directly covered in resume_profile.yaml's skills and experience bullets (invoicing microservice, Kafka notification pipeline, Terraform AWS modules, 92%+ JUnit coverage). Title and Bangalore/Gurugram location match. Main gap is years of experience (JD wants 10+, profile shows 6+), which keeps this below a top score."
+}

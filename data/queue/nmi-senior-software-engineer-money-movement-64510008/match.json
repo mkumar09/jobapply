@@ -1,0 +1,4 @@
+{
+  "score": 38,
+  "rationale": "JD's core languages are Scala and TypeScript, neither of which appears anywhere in resume_profile.yaml. There is overlap on C#, AWS (Docker/containerized services), and TDD, but the primary tech stack and the payments/money-movement domain are not represented in the profile's actual experience."
+}

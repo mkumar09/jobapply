@@ -1,0 +1,1 @@
+{"score": 35, "rationale": "JD requires proficiency building services with Node.js (JavaScript/TypeScript), which is absent from resume_profile.yaml (Java/C#/.NET are the listed languages). PostgreSQL and AWS/Azure distributed-systems experience partially overlap, but the primary backend language requirement is not met."}

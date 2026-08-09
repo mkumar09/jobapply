@@ -1,0 +1,4 @@
+{
+  "score": 42,
+  "rationale": "Some overlap on AWS, Kafka, and SQL, and the profile does include financial-services distributed-data-pipeline work (Standard Chartered Bank), but the JD requires 10-12 years and deep, specific capital-markets data-engineering expertise (DTCC/RTTM/Settlement Web, ISO 15022 messages, Unified Trade Record schema) that is not present in resume_profile.yaml. Title (Data Engineer) also doesn't match the profile's Backend Engineer track."
+}
