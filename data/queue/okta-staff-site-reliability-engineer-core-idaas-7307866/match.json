@@ -1,0 +1,4 @@
+{
+  "score": 38,
+  "rationale": "Same JD as the other Staff SRE postings: AWS/Terraform/Docker/PostgreSQL skills overlap on paper, but resume_profile.yaml shows no hands-on multi-cloud (AWS+GCP) production SRE work, no Kubernetes (EKS/GKE) operations experience, and no Redis/OpenSearch/on-call-leadership evidence; role wants 8+ years specifically in SRE/DevOps/Infra."
+}

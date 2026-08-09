@@ -1,0 +1,4 @@
+{
+  "score": 25,
+  "rationale": "Minimal overlap: PostgreSQL and AWS/Docker appear in resume_profile.yaml, but the JD's stack is Node.js/TypeScript/React/MongoDB, none of which appear anywhere in resume_profile.yaml (profile is Java/C#/.NET, no JS frontend or NoSQL experience). Also requires 8+ years vs 6+."
+}

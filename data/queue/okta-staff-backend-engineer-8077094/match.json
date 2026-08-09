@@ -1,0 +1,4 @@
+{
+  "score": 35,
+  "rationale": "Secondary overlap on AWS, Kubernetes, Docker, distributed systems, and microservices, but the core language requirement is Go (profile shows only Java/C#/.NET, no Go), and the role is centered on PAM/IAM domain and low-level network protocol work (SSH, Telnet, SNMP, database/network connectors) with no corresponding facts in resume_profile.yaml. Also asks for 7+ years vs Mahendra's 6+."
+}

@@ -1,0 +1,4 @@
+{
+  "score": 36,
+  "rationale": "Similar AWS/Terraform/Docker/PostgreSQL overlap, but adds a Go requirement (not in profile) plus Datadog/Splunk/OpenSearch observability tooling and GCP/EKS/GKE production ownership, none of which appear in resume_profile.yaml's Java/Spring Boot backend and data-migration experience."
+}

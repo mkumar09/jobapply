@@ -1,0 +1,4 @@
+{
+  "score": 32,
+  "rationale": "Language overlap (Java, C#/.NET, Python scripting) and a genuine open-source contributor background (JabRef), but the JD centers on owning multi-language SDK generators, CLI tooling, and developer-platform/OSS release strategy across Go/JS/.NET/Python/Java clients -- none of which resume_profile.yaml's experience bullets (data migration, invoicing microservice, notification service) reflect. Also requires 8+ years vs 6+."
+}

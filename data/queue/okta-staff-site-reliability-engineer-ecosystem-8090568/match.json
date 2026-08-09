@@ -1,0 +1,4 @@
+{
+  "score": 38,
+  "rationale": "Same JD pattern as the other Staff SRE postings: AWS/Terraform/Docker/PostgreSQL appear in resume_profile.yaml's skills list, but there is no hands-on evidence of multi-cloud production SRE ownership, Kubernetes (EKS/GKE) operations, or GCP experience in the actual experience bullets, which are backend feature/migration work rather than infrastructure reliability engineering."
+}

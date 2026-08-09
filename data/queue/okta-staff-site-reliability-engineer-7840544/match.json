@@ -1,0 +1,4 @@
+{
+  "score": 38,
+  "rationale": "Skills-list overlap on AWS, Terraform, Docker, Kubernetes, PostgreSQL, and Python/Bash scripting, but resume_profile.yaml's actual experience is backend feature delivery and a data-migration pipeline, not production SRE/on-call ownership -- no GCP, no hands-on Kubernetes (EKS/GKE) operations, no Redis (called out as a must-have), and the role wants 8+ years in SRE/DevOps roles specifically."
+}
