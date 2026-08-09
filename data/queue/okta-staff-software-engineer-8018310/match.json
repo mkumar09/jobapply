@@ -1,0 +1,4 @@
+{
+  "score": 28,
+  "rationale": "This Auth0 Native Apps role requires creating public/internal APIs with NodeJS/JavaScript/TypeScript, mobile CI/CD (GitHub Actions), and experience with MongoDB plus PostgreSQL; Java/Kotlin is mentioned only as part of the team's broader tech stack, not the required skill set. Mahendra's resume_profile.yaml has no Node.js, JavaScript/TypeScript, mobile development, React/Vue, or MongoDB experience -- his experience is Java/Spring Boot and C#/.NET backend work. He does have PostgreSQL and general REST API and AWS experience, which provide modest overlap, but the role's core required stack does not match his background."
+}

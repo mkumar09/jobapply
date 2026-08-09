@@ -1,0 +1,4 @@
+{
+  "score": 24,
+  "rationale": "This Staff Full Stack (Backend) role mandates Node.js (or Go) for backend services plus hands-on React/Next.js/MobX/Redux for the frontend, along with Redis and Kubernetes. Mahendra's resume_profile.yaml shows no Node.js, Go, React, or frontend framework experience -- his backend work is entirely in Java/Spring Boot and C#/.NET. He does have AWS, PostgreSQL, Kubernetes, and distributed-systems experience, which provide some cloud/infra overlap, but the JD's mandatory Node.js backend and required React frontend skills are not present anywhere in his profile."
+}

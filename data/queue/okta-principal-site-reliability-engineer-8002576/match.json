@@ -1,0 +1,4 @@
+{
+  "score": 30,
+  "rationale": "Principal SRE role centers on Kubernetes-in-production, Golang/Python, GitOps and observability tooling (Datadog/Splunk) as a reliability leader. resume_profile.yaml has AWS/Terraform/Docker/Kubernetes as listed tooling but no SRE/on-call/production-reliability track record, and no Go or Python production experience \u2014 role type mismatch from his backend engineering background."
+}

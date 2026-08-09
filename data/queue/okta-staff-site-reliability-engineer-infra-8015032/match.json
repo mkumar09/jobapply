@@ -1,0 +1,4 @@
+{
+  "score": 35,
+  "rationale": "This is a Staff SRE/Infra role centered on Kubernetes (EKS/GKE) production operations, multi-cloud (AWS+GCP), ECS-to-EKS migrations, and SRE practices (SLO/SLI, on-call, observability tooling like Prometheus/Grafana). Mahendra's resume shows AWS (EC2, RDS, DMS, S3, CloudWatch), Terraform IaC, Docker and Kubernetes as skills, and a Terraform-based AWS DMS pipeline at Standard Chartered, which gives partial overlap on IaC/AWS. However, he has no GCP experience, no hands-on EKS/GKE operational depth, and his background is backend software development (Java/Spring Boot/.NET), not SRE/DevOps operations -- a fundamentally different role focus than his 6+ years of experience represent."
+}

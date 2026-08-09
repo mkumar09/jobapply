@@ -1,0 +1,4 @@
+{
+  "score": 42,
+  "rationale": "Imports Platform Principal SWE requires 12+ years building large-scale distributed systems in Java/Spring Boot, which matches resume_profile .yaml's Java/Spring Boot/microservices/migration experience (the DB2->PostgreSQL 500M-record migration is directly relevant to an identity import/sync platform). But 12+ years vastly exceeds his ~7 years, and required Directory-services experience (Active Directory/LDAP/O365) is not present in the profile."
+}

@@ -1,0 +1,4 @@
+{
+  "score": 25,
+  "rationale": "Principal SWE - Windows requires 7+ years building Windows client features in C++/C#/.NET with Win32 API, IPC, and Windows-specific debugging. resume_profile.yaml lists C# and .NET Core/.NET MVC but no Windows systems/client programming, Win32 API, or IPC experience \u2014 this is a specialized platform mismatch despite the C#/.NET overlap."
+}

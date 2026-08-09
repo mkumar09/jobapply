@@ -1,0 +1,4 @@
+{
+  "score": 58,
+  "rationale": "Device Identity Principal SWE (Java) asks for 7+ years building scalable Java/Spring server-side features with Postgres/MySQL, REST APIs, caching and async processing \u2014 this matches resume_profile.yaml closely (Java, Spring Boot, PostgreSQL, REST, idempotency/ACID work) and the years requirement is right at his ~7 years. However, 'Minimum Requirements' also list deep endpoint-security domain expertise (TPM, Secure Enclave, MDM protocols) which has no basis in the profile, and the Principal scope (mentoring staff/senior engineers, setting technical standard across a pillar) exceeds his current Senior Backend Engineer level."
+}
