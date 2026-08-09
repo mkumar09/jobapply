@@ -1,0 +1,4 @@
+{
+  "score": 55,
+  "rationale": "Good tech overlap -- Java, AWS (Lambda/EKS/DynamoDB/Kafka ecosystem), Apache Kafka, Terraform, Kubernetes, CI/CD, REST APIs, and idempotency/ACID reliability work (dedup logic for a financial transaction engine) all map to the JD's asks. However the JD requires 12+ years of experience and cross-team technical leadership 'without direct authority' at Staff/P4 scale; resume_profile.yaml shows 6+ years, a significant experience gap versus the stated seniority bar."
+}

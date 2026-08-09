@@ -1,0 +1,4 @@
+{
+  "score": 45,
+  "rationale": "Same full-stack JD as the India posting for this role (React/Angular front-end plus Node.js/Springboot back-end); resume_profile.yaml shows only backend Java/Spring Boot/.NET experience with no React/Angular/Node.js/JavaScript. Overlap limited to Spring Boot backend work, SQL/PostgreSQL, and AI/agentic tooling (RAG, MCP, Agentic AI); the primary full-stack requirement is unmet."
+}

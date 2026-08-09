@@ -1,0 +1,4 @@
+{
+  "score": 71,
+  "rationale": "Solid match: hands-on Java with strong fundamentals (production Java/Spring Boot services, 92% JUnit coverage) matches the JD's Java requirement; Apache Kafka/event-driven architecture matches the 'Kafka, SQS' ask; AWS matches the cloud infra requirement; REST APIs and distributed-systems work (500M+ record migration, idempotency/ACID transaction engine) match the 'horizontally-scalable, resilient systems' ask; CI/CD matches. Gap: JD asks for 8+ years hands-on JVM experience vs. resume_profile.yaml's 6+ years."
+}

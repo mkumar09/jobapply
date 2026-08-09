@@ -1,0 +1,4 @@
+{
+  "score": 46,
+  "rationale": "JD is a full-stack role explicitly requiring front-end (React/Angular) and Node.js experience; resume_profile.yaml has no React, Angular, Node.js, or JavaScript experience -- only backend Java/Spring Boot/.NET. Partial overlap via Spring Boot backend experience, SQL/PostgreSQL/MS-SQL, and AI/agentic tooling (RAG, MCP, Agentic AI) matching the 'agentic coding operating model' ask, but the core full-stack front-end requirement is unmet."
+}

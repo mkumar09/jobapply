@@ -1,0 +1,4 @@
+{
+  "score": 40,
+  "rationale": "JD is a full-stack engineering role requiring React/JavaScript/TypeScript front-end work and LLM agent-framework experience (Langchain/LangGraph/LlamaIndex); resume_profile.yaml has no React/JS/TypeScript experience -- only backend Java/C#/.NET. Some overlap via AI/agentic skills (RAG, Agentic AI, MCP, OpenAI API integration) and general distributed-systems/data-pipeline experience, but the primary full-stack front-end requirement is entirely unmet."
+}

@@ -1,0 +1,4 @@
+{
+  "score": 64,
+  "rationale": "Decent tech overlap: Java, Apache Kafka, AWS, Kubernetes/Docker, distributed-systems and CI/CD experience, plus idempotency/ACID reliability work map to the JD's high-scale streaming/messaging and distributed-systems asks. Gaps: JD requires 8+ years (resume_profile.yaml shows 6+) and hands-on experience with high-scale streaming frameworks like Spark/Flink and AWS Kinesis, which are not present in resume_profile.yaml."
+}
