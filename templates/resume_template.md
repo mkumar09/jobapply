@@ -10,14 +10,22 @@ call, not deterministic code.
 1. Read `job.json` (title, location, description_text) and `data/resume_profile.yaml`
    (the ground-truth facts about Mahendra's background — never invent experience
    he doesn't have).
-2. Score the match 0-100 against `config/profile.yaml`'s target roles/skills, and
+2. Location check, before scoring: the job must be India-based or explicitly
+   "Remote, India" — never a remote role scoped to another country (e.g. "U.S.
+   Remote", "Remote (UK)"). The scraper's location_deny list in config/profile.yaml
+   already filters most of these out, but re-check the actual job.json location
+   and description_text here as a safety net — job boards sometimes list a vague
+   "Remote" with the real country restriction only mentioned in the body text. If
+   the role isn't India/Remote-India, set status to `"scored_below_threshold"` with
+   a rationale noting the location mismatch, and skip scoring/tailoring entirely.
+3. Score the match 0-100 against `config/profile.yaml`'s target roles/skills, and
    write `match.json`:
    ```json
    {"score": 82, "rationale": "Strong Java/Spring/Kafka overlap, AWS matches, title matches Senior Backend Engineer."}
    ```
-3. If `score < apply_min_score` (see config/profile.yaml): set `status.json` status
+4. If `score < apply_min_score` (see config/profile.yaml): set `status.json` status
    to `"scored_below_threshold"` and stop — no resume gets tailored for it.
-4. If `score >= apply_min_score`, build a tailoring dict (see schema below), call:
+5. If `score >= apply_min_score`, build a tailoring dict (see schema below), call:
    ```python
    from resume.render import render
    import yaml
@@ -27,13 +35,13 @@ call, not deterministic code.
    ```
    and write a short `cover_note.md` (3-4 sentences, truthful, referencing the
    specific JD) into the same folder.
-5. Set `status.json` status to `"ready_to_apply"`.
+6. Set `status.json` status to `"ready_to_apply"`.
 
 ## Tailoring dict schema (passed to `resume.render.render`)
 
 ```python
 {
-  "summary": "2-3 sentence summary rewritten to foreground the JD's priorities, "
+  "summary": "AT MOST 2 sentences, rewritten to foreground the JD's priorities, "
              "using only facts already present in resume_profile.yaml",
   "skills_highlight": ["Kafka", "AWS", "Spring Boot"],   # names to move first within their category
   "experience_order": {
@@ -42,6 +50,10 @@ call, not deterministic code.
   "max_bullets_per_role": 4  # optional, defaults to 4 — lower it if a JD needs a shorter resume
 }
 ```
+
+The summary is hard-capped at 2 sentences by `resume/render.py` itself (anything
+longer gets truncated), so keep it to 2 regardless — don't rely on the renderer's
+truncation to fix an overlong summary, write it tight to begin with.
 
 The renderer is tuned to keep output to one page (A4, tight margins/spacing, capped
 bullets) — this is intentional, don't loosen the formatting or raise the bullet cap

@@ -14,6 +14,7 @@ Usage standalone (renders the untailored base resume, useful for testing):
 """
 from __future__ import annotations
 
+import re
 import sys
 from pathlib import Path
 
@@ -30,6 +31,12 @@ ROOT = Path(__file__).resolve().parent.parent
 # bullets render per role (reordering already put the most relevant ones first,
 # so truncating after reorder keeps the highest-signal bullets).
 DEFAULT_MAX_BULLETS_PER_ROLE = 4
+MAX_SUMMARY_SENTENCES = 2
+
+
+def _limit_sentences(text: str, max_sentences: int) -> str:
+    sentences = re.split(r"(?<=[.!?])\s+", text.strip())
+    return " ".join(sentences[:max_sentences])
 
 
 def _tighten(paragraph, space_after: int = 2, space_before: int = 0) -> None:
@@ -150,7 +157,8 @@ def render(resume_profile: dict, tailoring: dict, output_path: Path) -> None:
         return h
 
     section_heading("Professional Summary")
-    _tighten(doc.add_paragraph(tailoring.get("summary") or resume_profile["summary_base"].strip()))
+    summary_text = _limit_sentences(tailoring.get("summary") or resume_profile["summary_base"].strip(), MAX_SUMMARY_SENTENCES)
+    _tighten(doc.add_paragraph(summary_text))
 
     section_heading("Technical Skills")
     skills = resume_profile["skills"]

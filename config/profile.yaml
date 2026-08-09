@@ -7,7 +7,6 @@ seniority_keywords:
   - "senior"
   - "staff"
   - "lead"
-  - "principal"
   - "sde 3"
   - "sde3"
   - "sde-3"
@@ -40,11 +39,11 @@ exclude_titles:
   - "tester"
 
 locations:
-  # A job passes the location filter if its location text contains any of these
-  # (case-insensitive). Empty/blank location text is treated as "unspecified" and
-  # kept for manual review rather than auto-dropped.
+  # A job passes the location filter only if its location text contains one of
+  # these (case-insensitive) AND does not contain anything in location_deny.
+  # Deliberately no bare "remote" entry - that alone let non-India remote roles
+  # (e.g. "U.S. Remote") through. Remote is only accepted when paired with India.
   - "india"
-  - "remote"
   - "bangalore"
   - "bengaluru"
   - "hyderabad"
@@ -56,26 +55,47 @@ locations:
   - "delhi"
   - "mumbai"
 
+location_deny:
+  # If any of these appear in the location text, the job is rejected even if
+  # something above also matched (guards against e.g. "India, US, UK" postings
+  # or ambiguous multi-region strings that aren't actually India-specific).
+  - "united states"
+  - "u.s."
+  - "usa"
+  - "u.k."
+  - "united kingdom"
+  - "canada"
+  - "australia"
+  - "singapore"
+  - "germany"
+  - "europe"
+  - "emea"
+  - "latam"
+  - "philippines"
+  - "poland"
+  - "ireland"
+  - "mexico"
+
 skills:
   # Used by matching/prefilter.py for keyword-overlap scoring. Weight = importance.
   core:
-    - {name: "Java", weight: 3}
-    - {name: "Spring Boot", weight: 3}
-    - {name: "Spring Cloud", weight: 2}
-    - {name: "C#", weight: 3}
-    - {name: ".NET", weight: 3}
-    - {name: ".NET Core", weight: 3}
-    - {name: "SQL", weight: 2}
-    - {name: "Kafka", weight: 2}
-    - {name: "AWS", weight: 2}
+    - { name: "Java", weight: 3 }
+    - { name: "Spring Boot", weight: 3 }
+    - { name: "Spring Cloud", weight: 2 }
+    - { name: "C#", weight: 3 }
+    - { name: ".NET", weight: 3 }
+    - { name: ".NET Core", weight: 3 }
+    - { name: "SQL", weight: 2 }
+    - { name: "Kafka", weight: 2 }
+    - { name: "AWS", weight: 2 }
   secondary:
-    - {name: "Microservices", weight: 1}
-    - {name: "PostgreSQL", weight: 1}
-    - {name: "Docker", weight: 1}
-    - {name: "Kubernetes", weight: 1}
-    - {name: "Terraform", weight: 1}
-    - {name: "REST", weight: 1}
-    - {name: "distributed systems", weight: 1}
+    - { name: "Microservices", weight: 1 }
+    - { name: "PostgreSQL", weight: 1 }
+    - { name: "Docker", weight: 1 }
+    - { name: "Kubernetes", weight: 1 }
+    - { name: "Terraform", weight: 1 }
+    - { name: "REST", weight: 1 }
+    - { name: "distributed systems", weight: 1 }
 
 # Cheap prefilter threshold (0-100). Jobs scoring below this are dropped before
 # spending an LLM call on them during the scheduled routine.

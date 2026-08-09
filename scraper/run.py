@@ -70,11 +70,13 @@ def title_passes(title: str, seniority_keywords: list[str], role_keywords: list[
     return has_seniority and has_role
 
 
-def location_passes(location: str, allowed_locations: list[str]) -> bool:
+def location_passes(location: str, allowed_locations: list[str], deny_locations: list[str]) -> bool:
     if not location.strip():
         # Unspecified location: keep for manual review rather than silently dropping.
         return True
     loc = location.lower()
+    if any(bad in loc for bad in deny_locations):
+        return False
     return any(allowed in loc for allowed in allowed_locations)
 
 
@@ -91,6 +93,7 @@ def main() -> None:
     role_keywords = [t.lower() for t in profile.get("role_keywords", [])]
     exclude_titles = [t.lower() for t in profile.get("exclude_titles", [])]
     allowed_locations = [l.lower() for l in profile.get("locations", [])]
+    deny_locations = [l.lower() for l in profile.get("location_deny", [])]
 
     seen = load_seen_jobs()
     new_job_ids = []
@@ -114,7 +117,7 @@ def main() -> None:
                 continue
             if not title_passes(job["title"], seniority_keywords, role_keywords, exclude_titles):
                 continue
-            if not location_passes(job["location"], allowed_locations):
+            if not location_passes(job["location"], allowed_locations, deny_locations):
                 continue
 
             job["description_text"] = html_to_text(job.get("description_html", ""))
