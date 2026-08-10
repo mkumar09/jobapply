@@ -1,0 +1,4 @@
+{
+  "score": 58,
+  "rationale": "Strong overlap on Java, Kafka, and building scalable distributed backend services (e.g. invoicing microservice, event-driven email service), but JD requires 8+ yrs (profile has ~6) and hands-on experience with Flink/Spark/Snowflake/Hadoop-style streaming data-platform tech that isn't in the profile, so it falls short of a true data-platform engineering match."
+}
