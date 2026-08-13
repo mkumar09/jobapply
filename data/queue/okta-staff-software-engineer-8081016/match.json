@@ -1,0 +1,4 @@
+{
+  "score": 72,
+  "rationale": "Strong overlap on AWS and Terraform (built reusable Terraform IaC modules for an AWS DMS pipeline, directly relevant to this CD/IaC tooling role), plus Java, Docker, Kubernetes, microservices and distributed systems. Title (Staff/Senior SDE) and location (Bengaluru, India) match. Gaps: no direct Spinnaker/CD-platform-specific experience, and DB background is PostgreSQL/MS-SQL rather than MySQL/MongoDB, though core infra-automation and distributed-systems skills transfer well."
+}

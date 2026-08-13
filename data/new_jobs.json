@@ -1,22 +1,14 @@
 [
   {
-    "job_id": "greenhouse:coupang:7923645",
-    "queue_dir": "data/queue/coupang-senior-manager-back-end-engineering-7923645"
+    "job_id": "greenhouse:okta:8081016",
+    "queue_dir": "data/queue/okta-staff-software-engineer-8081016"
   },
   {
-    "job_id": "greenhouse:coupang:8064140",
-    "queue_dir": "data/queue/coupang-senior-staff-backend-engineer-fraud-detection-806414"
+    "job_id": "greenhouse:okta:8007082",
+    "queue_dir": "data/queue/okta-staff-software-engineer-android-device-authenticators-8"
   },
   {
-    "job_id": "greenhouse:okta:8113501",
-    "queue_dir": "data/queue/okta-senior-software-engineer-8113501"
-  },
-  {
-    "job_id": "greenhouse:okta:7588357",
-    "queue_dir": "data/queue/okta-senior-software-engineer-in-test-macos-7588357"
-  },
-  {
-    "job_id": "greenhouse:okta:7471202",
-    "queue_dir": "data/queue/okta-staff-full-stack-engineer-7471202"
+    "job_id": "greenhouse:okta:7920042",
+    "queue_dir": "data/queue/okta-staff-software-engineer-in-test-7920042"
   }
 ]
