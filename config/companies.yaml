@@ -131,6 +131,33 @@ companies:
 - provider: lever
   token: gohighlevel
   name: HighLevel
+- provider: greenhouse
+  token: blackduck
+  name: Black Duck Software
+- provider: ashby
+  token: tilthq
+  name: Tilt Finance
+- provider: greenhouse
+  token: konovo
+  name: Konovo
+- provider: greenhouse
+  token: project44
+  name: project44
+- provider: greenhouse
+  token: nice
+  name: NICE
+- provider: greenhouse
+  token: bswiftindia
+  name: bswift India
+- provider: greenhouse
+  token: sezzle
+  name: Sezzle
+- provider: greenhouse
+  token: alphasense
+  name: AlphaSense (Global)
+- provider: greenhouse
+  token: exadelinc
+  name: Exadel
 candidates:
 - provider: greenhouse
   token: coupang
@@ -279,3 +306,33 @@ candidates:
 - provider: lever
   token: gohighlevel
   name: HighLevel
+- provider: greenhouse
+  token: blackduck
+  name: Black Duck Software
+- provider: ashby
+  token: tilthq
+  name: Tilt Finance
+- provider: greenhouse
+  token: konovo
+  name: Konovo
+- provider: greenhouse
+  token: project44
+  name: project44
+- provider: greenhouse
+  token: nice
+  name: NICE
+- provider: greenhouse
+  token: bswiftindia
+  name: bswift India
+- provider: greenhouse
+  token: sezzle
+  name: Sezzle
+- provider: greenhouse
+  token: alphasense
+  name: AlphaSense (Global)
+- provider: greenhouse
+  token: exadelinc
+  name: Exadel
+- provider: ashby
+  token: deel
+  name: Deel
