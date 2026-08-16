@@ -1,0 +1,4 @@
+{
+  "score": 45,
+  "rationale": "Role centers on Golang (preferred) for a specialized payments/PCI-DSS domain at 7+ years; Mahendra'''s Go is listed as familiar-only, not a core language, and there is no direct payments-processor integration experience. Financial-domain adjacency (Standard Chartered) is not enough to offset the language/domain mismatch."
+}

@@ -1,0 +1,4 @@
+{
+  "score": 52,
+  "rationale": "This is an SRE-titled infra role (Kubernetes, AWS RDS, capacity planning, on-call ownership) rather than backend software engineering; Mahendra has AWS/Terraform infra exposure but his core track record is backend feature and migration work, not SRE ownership. Fixed 6am-2pm EST working hours also narrows fit."
+}
