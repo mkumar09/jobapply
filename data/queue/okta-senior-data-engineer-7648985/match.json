@@ -1,0 +1,4 @@
+{
+  "score": 32,
+  "rationale": "Location matches (Bengaluru, India) but core stack mismatch: role centers on Snowflake, dbt, Databricks, Airflow, and lakehouse (Iceberg/Delta) data engineering, none of which appear in the profile. Overlap is limited to generic infra (AWS, Terraform, Docker, Kubernetes, SQL) shared across many backend roles. Profile is a Java/Spring Boot/.NET distributed-systems backend engineer, not a data engineer, so this is a poor fit despite the prefilter keyword overlap."
+}
