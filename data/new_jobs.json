@@ -1,6 +1,18 @@
 [
   {
-    "job_id": "greenhouse:okta:7648985",
-    "queue_dir": "data/queue/okta-senior-data-engineer-7648985"
+    "job_id": "greenhouse:alphasenseindia:8355616002",
+    "queue_dir": "data/queue/alphasense-senior-software-engineer-55616002"
+  },
+  {
+    "job_id": "greenhouse:okta:7765038",
+    "queue_dir": "data/queue/okta-senior-software-engineer-tooling-platform-terraform-776"
+  },
+  {
+    "job_id": "lever:3pillarglobal:53e4bb5e-b281-42b8-b006-8fcbde201e25",
+    "queue_dir": "data/queue/3pillar-global-senior-software-engineer-java-ai-telecom-de20"
+  },
+  {
+    "job_id": "greenhouse:alphasense:8725604002",
+    "queue_dir": "data/queue/alphasense-global-senior-software-engineer-25604002"
   }
 ]
